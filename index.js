@@ -11,11 +11,11 @@ console.log('The notes app in running!');
 
 const model = new NotesModel;
 
-model.addNote('Time for lunch!');
-model.addNote('Buy milk!');
+// model.addNote('Time for lunch!');
+// model.addNote('Buy milk!');
 
 const view = new NotesView(model)
 
-view.displayNotes()
+// view.displayNotes()
 
 console.log(model.getNotes());

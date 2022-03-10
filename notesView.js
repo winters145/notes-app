@@ -14,13 +14,14 @@ class NotesView {
 
   displayNotes() {
     const notes = this.model.getNotes()
+
+    const note = notes[notes.length-1] 
     
-    notes.forEach( note => { 
-      const noteEl = document.createElement('div');
-      noteEl.innerText = note;
-      noteEl.className = 'note';
-      this.mainContainerEl.append(noteEl);
-    })
+    const noteEl = document.createElement('div');
+    noteEl.innerText = note;
+    noteEl.className = 'note';
+    this.mainContainerEl.append(noteEl);
+    
   }
 }
 

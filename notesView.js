@@ -9,6 +9,7 @@ class NotesView {
       this.inputEl = document.querySelector('#note-input').value
       this.model.addNote(this.inputEl);
       this.displayNotes();
+      this.clearInput()
     });
   }
 
@@ -16,12 +17,16 @@ class NotesView {
     const notes = this.model.getNotes()
 
     const note = notes[notes.length-1] 
-    
+
     const noteEl = document.createElement('div');
     noteEl.innerText = note;
     noteEl.className = 'note';
     this.mainContainerEl.append(noteEl);
     
+  }
+
+  clearInput() {
+    document.querySelector('#note-input').value = ''
   }
 }
 

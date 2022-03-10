@@ -37,6 +37,7 @@
             this.inputEl = document.querySelector("#note-input").value;
             this.model.addNote(this.inputEl);
             this.displayNotes();
+            this.clearInput();
           });
         }
         displayNotes() {
@@ -46,6 +47,9 @@
           noteEl.innerText = note;
           noteEl.className = "note";
           this.mainContainerEl.append(noteEl);
+        }
+        clearInput() {
+          document.querySelector("#note-input").value = "";
         }
       };
       module.exports = NotesView2;
